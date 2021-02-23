@@ -12,6 +12,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ComponentScan(basePackages = {"com.imooc","org.n3r.idworker"})
 public class Application {
     public static void main(String[] args) {
+        System.out.println("德玛西亚");
         SpringApplication.run(Application.class,args);
     }
 }
