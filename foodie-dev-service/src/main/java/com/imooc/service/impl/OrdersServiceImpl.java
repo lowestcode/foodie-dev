@@ -68,8 +68,6 @@ public class OrdersServiceImpl implements OrdersService {
                 + address.getDistrict() + " "
                 + address.getDetail());
 
-//        newOrder.setTotalAmount();
-//        newOrder.setRealPayAmount();
         newOrder.setPostAmount(postAmount);
 
         newOrder.setPayMethod(payMethod);
@@ -82,9 +80,9 @@ public class OrdersServiceImpl implements OrdersService {
 
 
         // 2. 循环根据itemSpecIds保存订单商品信息表
-        String itemSpecIdArr[] = itemSpecIds.split(",");
-        Integer totalAmount = 0;    // 商品原价累计
-        Integer realPayAmount = 0;  // 优惠后的实际支付价格累计
+        String[] itemSpecIdArr = itemSpecIds.split(",");
+        int totalAmount = 0;    // 商品原价累计
+        int realPayAmount = 0;  // 优惠后的实际支付价格累计
         for (String itemSpecId : itemSpecIdArr) {
 
             // TODO 整合redis后，商品购买的数量重新从redis的购物车中获取

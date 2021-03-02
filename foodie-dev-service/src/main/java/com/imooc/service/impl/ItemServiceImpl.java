@@ -202,7 +202,7 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public void decreaseItemSpecStock(String specId, int buyCounts) {
 
-        // synchronized 不推荐使用，集群下无用，性能低下
+        // synchronized 不推荐使用，集群下无用，性能低下  synchronized是Java中的关键字，是一种同步锁
         // 锁数据库: 不推荐，导致数据库性能低下
         // 分布式锁 zookeeper redis
 
@@ -220,9 +220,9 @@ public class ItemServiceImpl implements ItemService {
         // lockUtil.unLock(); -- 解锁
 
 
-//        int result = itemsMapperCustom.decreaseItemSpecStock(specId, buyCounts);
-//        if (result != 1) {
-//            throw new RuntimeException("订单创建失败，原因：库存不足!");
-//        }
+        int result = itemsMapperCustom.decreaseItemSpecStock(specId, buyCounts);
+        if (result != 1) {
+            throw new RuntimeException("订单创建失败，原因：库存不足!");
+        }
     }
 }
