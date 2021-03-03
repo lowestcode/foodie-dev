@@ -21,6 +21,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.*;
 
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @Service
 public class ItemServiceImpl implements ItemService {
 
