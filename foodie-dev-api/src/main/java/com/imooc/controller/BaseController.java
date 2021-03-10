@@ -21,8 +21,8 @@ public class BaseController {
 
     // 微信支付成功 -> 支付中心 -> 天天吃货平台
     //                       |-> 回调通知的url
-    String payReturnUrl = "http://localhost:8080/orders/notifyMerchantOrderPaid";
-//    String payReturnUrl = "http://3kf27y.natappfree.cc/orders/notifyMerchantOrderPaid";
+//    String payReturnUrl = "http://localhost:8080/orders/notifyMerchantOrderPaid";
+    String payReturnUrl = "http://api.twinkleblog.com:8080/foodie-dev-api/orders/notifyMerchantOrderPaid"; //服务器的
 
     // 用户上传头像的位置
     public static final String IMAGE_USER_FACE_LOCATION = File.separator + "workspaces" +

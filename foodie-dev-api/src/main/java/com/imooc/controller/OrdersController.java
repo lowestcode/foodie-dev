@@ -99,6 +99,7 @@ public class OrdersController extends BaseController{
     @PostMapping("/getPaidOrderInfo")
     public IMOOCJSONResult getPaidOrderInfo(String orderId){
         OrderStatus orderStatus = orderService.queryOrderStatusInfo(orderId);
+        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_DELIVER.type);
         return IMOOCJSONResult.ok(orderStatus);
     }
 }

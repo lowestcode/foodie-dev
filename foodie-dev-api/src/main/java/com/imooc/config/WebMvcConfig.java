@@ -29,6 +29,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         //todo 修改地址
         registry.addResourceHandler("/**") //映射所有资源
                 .addResourceLocations("classpath:/META-INF/resources/") // 重新映射swagger2地址
-                .addResourceLocations("file:F:\\maven\\apache-tomcat-7.0.105\\webapps\\");//映射本地静态资源
+//                .addResourceLocations("file:F:\\maven\\apache-tomcat-7.0.105\\webapps\\");//映射本地静态资源
+                .addResourceLocations("file:/workspaces/images/");//服务器的地址
     }
 }

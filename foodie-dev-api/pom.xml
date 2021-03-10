@@ -12,6 +12,9 @@
     <groupId>org.imooc</groupId>
     <artifactId>foodie-dev-api</artifactId>
 
+    <!--打war包[1]-->
+<!--    <packaging>war</packaging>-->
+
     <dependencies>
         <dependency>
             <groupId>org.imooc</groupId>
